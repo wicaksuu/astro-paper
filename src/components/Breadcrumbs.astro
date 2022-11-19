@@ -14,7 +14,7 @@ breadcrumbList[0] === "posts" &&
 
 <nav class="breadcrumb" aria-label="breadcrumb">
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a href="/astro-paper">Home</a></li>
     {
       breadcrumbList.map((breadcrumb, index) => (
         <li>
@@ -23,7 +23,7 @@ breadcrumbList[0] === "posts" &&
               {breadcrumb}
             </span>
           ) : (
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
+            <a href={`/astro-paper/${breadcrumb}`}>{breadcrumb}</a>
           )}
         </li>
       ))

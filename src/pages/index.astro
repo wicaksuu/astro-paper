@@ -22,7 +22,7 @@ const sortedPosts = getSortedPosts(posts);
       <h1>Mingalaba</h1>
       <a
         target="_blank"
-        href="/rss.xml"
+        href="/astro-paper/rss.xml"
         class="rss-link"
         aria-label="rss feed"
         title="RSS Feed"
@@ -62,7 +62,7 @@ const sortedPosts = getSortedPosts(posts);
             ({ frontmatter }) =>
               frontmatter.featured && (
                 <Card
-                  href={`/posts/${slugify(frontmatter)}`}
+                  href={`/astro-paper/posts/${slugify(frontmatter)}`}
                   post={frontmatter}
                   secHeading={false}
                 />
@@ -82,7 +82,7 @@ const sortedPosts = getSortedPosts(posts);
             ({ frontmatter }, index) =>
               index < 4 && (
                 <Card
-                  href={`/posts/${slugify(frontmatter)}`}
+                  href={`/astro-paper/posts/${slugify(frontmatter)}`}
                   post={frontmatter}
                   secHeading={false}
                 />
@@ -91,7 +91,7 @@ const sortedPosts = getSortedPosts(posts);
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
+        <LinkButton href="/astro-paper/posts">
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
