@@ -18,7 +18,7 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(
-  ogImage ? ogImage : SITE.ogImage,
+  ogImage ? `/astro-paper/${ogImage}` : `/astro-paper/${SITE.ogImage}`,
   Astro.url.origin
 );
 ---
@@ -41,12 +41,12 @@ const socialImageURL = new URL(
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={`/astro-paper/${canonicalURL}`} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={`/astro-paper/${canonicalURL}}`} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
